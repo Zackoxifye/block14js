@@ -31,19 +31,22 @@ console.log(odds4);
 // "a", "e", "i", "o", and "u" are considered vowels. 
 // Every other letter is considered a consant.
 
-let vowels = ["a", "e", "i", "o", "u"];
-let cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
+let vowels=["a", "e", "i", "o", "u"];
+const input = "hello"
 
-function countVowel(str1)
-for (let i = 1; i <= str1; i++){
-    if( i == vowels) vowels;
-    if( i == cons) cons;
-    output = `${str1} has ${cons} consonants and ${vowels} vowels. `;
+let vowelCount = 0;
+let consCount = 0;
 
+for(const char of input){
+    if (vowels.includes(char)){
+        vowelCount++
+    } else{
+        consCount++;
+    }
 }
 
+console.log(`${input} has ${vowelCount} vowels and ${consCount} consonants`);
 
-countVowel("hello")
 
 //                                      REVERSE ARRAY
 
